@@ -1,0 +1,31 @@
+{
+  "name": "tl-backend",
+  "version": "1.0.0",
+  "description": "It's a web tool that automatically generates team-leads for a week",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "test": "mocha ./server/test --exit",
+    "dev": "nodemon ./server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micah-akpan/team-leads-generator-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micah-akpan/team-leads-generator-backend/issues"
+  },
+  "homepage": "https://github.com/micah-akpan/team-leads-generator-backend#readme"
+}
