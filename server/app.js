@@ -13,8 +13,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api', userRouter);
-
 app.use((req, res, next) => {
     res.set({
         'Access-Control-Allow-Origin': '*',
@@ -22,6 +20,8 @@ app.use((req, res, next) => {
     })
     next();
 });
+
+app.use('/api', userRouter);
 
 app.listen(port, () => {
     console.log(`App listening on port on port: ${app.get('port')}`);
