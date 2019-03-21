@@ -1,5 +1,6 @@
 const express = require('express');
 const logger = require('morgan');
+const userRouter = require('./routes/users');
 const app = express();
 
 const port = parseInt(process.env.PORT) || 7777;
@@ -11,6 +12,8 @@ app.use(logger('dev'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use('/api', userRouter);
 
 app.use((req, res, next) => {
     res.set({
